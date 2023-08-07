@@ -1,2 +1,2 @@
 #!/bin/bash
-eval "$PYCODE"
+IFS=$'\n' read -r -d '' -a lines <<< "$PYCODE"; for line in "${lines[@]}"; do python3 -c "$line"; done
