@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "Compiling $PYFILE ..."
 python3 -m py_compile "$PYFILE"
-echo "Compiled successfully: $PYFILEc"
+echo "$PYFILE compiled successfully"
+mv "$PYFILE" "${PYFILE}c"
