@@ -8,25 +8,25 @@
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *current = *head;
-int values[2048];
-int size = 0, i = 0;
+    listint_t *current = *head;
+    int values[2048];
+    int size = 0, i = 0;
 
-if (*head == NULL)
-return (1);
+    if (*head == NULL)
+        return (1);
 
-while (current)
-{
-values[size++] = current->n;
-current = current->next;
-}
+    while (current)
+    {
+        values[size++] = current->n;
+        current = current->next;
+    }
 
-while (i < size / 2)
-{
-if (values[i] != values[size - i - 1])
-return (0);
-i++;
-}
+    while (i < size / 2)
+    {
+        if (values[i] != values[size - i - 1])
+            return (0);
+        i++;
+    }
 
-return (1);
+    return (1);
 }
